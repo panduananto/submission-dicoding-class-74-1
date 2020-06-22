@@ -114,6 +114,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             trimText();
             cardToVertical();
+          } else if (page === "facts") {
+            const modalElements = document.querySelectorAll(".collapsible");
+            M.Collapsible.init(modalElements);
           }
         } else if (this.status == 404) {
           content.innerHTML = "<p>Halaman tidak ditemukan</p>";

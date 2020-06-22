@@ -46,7 +46,8 @@ let urlsToCache = [
   "/assets/icons/icon-152x152.png",
   "/assets/icons/icon-192x192.png",
   "/assets/icons/icon-384x384.png",
-  "/assets/icons/icon-512x512.png"
+  "/assets/icons/icon-512x512.png",
+  "/manifest.json"
 ];
 
 self.addEventListener("install", function (event) {

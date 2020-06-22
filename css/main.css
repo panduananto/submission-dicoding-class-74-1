@@ -238,6 +238,61 @@ nav ul li a::after {
   margin-bottom: 10px;
 }
 
+/* Main content facts */
+
+.header-hero-content-facts {
+  justify-content: flex-start;
+  background-image: url("../assets/images/carousel-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  padding: 0 50px;
+  position: relative;
+  z-index: 0;
+}
+
+.header-hero-content-facts h1 {
+  font-family: "Open-Sans", sans-serif;
+  font-size: 56px;
+}
+
+.header-hero-content-facts p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+}
+
+.header-hero-content-facts::before {
+  content: "";
+  width: 100%;
+  height: 400px;
+  background: rgba(0, 0, 0, 0.71);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.facts-container {
+  padding: 30px;
+}
+
+.collapsible-header {
+  padding: 30px;
+}
+
+.collapsible-header span {
+  color: #651fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.collapsible-body span {
+  font-family: "Open-Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+}
+
 /* Footer */
 
 .page-footer {
