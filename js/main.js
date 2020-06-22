@@ -108,6 +108,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
             trimText();
             cardToVertical();
+          } else if (page === "moons") {
+            const modalElements = document.querySelectorAll(".modal");
+            M.Modal.init(modalElements);
+
+            trimText();
+            cardToVertical();
           }
         } else if (this.status == 404) {
           content.innerHTML = "<p>Halaman tidak ditemukan</p>";
