@@ -50,7 +50,8 @@ nav ul li a::after {
   letter-spacing: 10px;
 }
 
-/* Main content */
+/* Main content home*/
+
 .header-hero-content {
   justify-content: center;
   background-image: url("../assets/images/header-background.jpg");
@@ -132,6 +133,57 @@ nav ul li a::after {
   font-weight: 700;
   text-align: center;
   text-decoration: none;
+}
+
+/* Main content planets */
+
+.header-hero-content-planets {
+  justify-content: flex-start;
+  background-image: url("../assets/images/planets-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  padding: 0 50px;
+  position: relative;
+  z-index: 0;
+}
+
+.header-hero-content-planets h1 {
+  font-family: "Open-Sans", sans-serif;
+  font-size: 56px;
+}
+
+.header-hero-content-planets p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+}
+
+.header-hero-content-planets::before {
+  content: "";
+  width: 100%;
+  height: 400px;
+  background: rgba(0, 0, 0, 0.71);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.planets-container {
+  padding: 30px;
+}
+
+.planets-container .card-content h4 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.planets-container .card-content p {
+  font-family: "Open-Sans", sans-serif;
+  font-weight: 400;
+  margin-bottom: 10px;
 }
 
 /* Footer */

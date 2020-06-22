@@ -1,16 +1,45 @@
-const CACHE_NAME = "firstpwa-v5";
+const CACHE_NAME = "planets-v1";
 
 let urlsToCache = [
   "/",
   "/nav.html",
   "/index.html",
   "/pages/home.html",
-  "/pages/about.html",
-  "/pages/contact.html",
+  "/pages/planets.html",
+  "/pages/moons.html",
+  "/pages/facts.html",
   "/css/materialize.min.css",
+  "/css/main.css",
   "/js/materialize.min.js",
-  "/js/nav.js",
-  "/assets/logo-codepolitan.png"
+  "/js/main.js",
+  "/assets/images/carousel-background.jpg",
+  "/assets/images/earth.png",
+  "/assets/images/earth-info.jpg",
+  "/assets/images/header-background.jpg",
+  "/assets/images/jupiter.png",
+  "/assets/images/jupiter-info.jpg",
+  "/assets/images/mars.png",
+  "/assets/images/mars-info.jpg",
+  "/assets/images/mercury.png",
+  "/assets/images/mercury-info.jpg",
+  "/assets/images/moons-background.jpg",
+  "/assets/images/neptune.png",
+  "/assets/images/neptunus-info.jpg",
+  "/assets/images/planets-background.jpg",
+  "/assets/images/saturn.png",
+  "/assets/images/saturnus-info.jpg",
+  "/assets/images/uranus.png",
+  "/assets/images/uranus-info.jpg",
+  "/assets/images/venus.png",
+  "/assets/images/venus-info.png",
+  "/assets/icons/icon-72x72.png",
+  "/assets/icons/icon-96x96.png",
+  "/assets/icons/icon-128x128.png",
+  "/assets/icons/icon-144x144.png",
+  "/assets/icons/icon-152x152.png",
+  "/assets/icons/icon-192x192.png",
+  "/assets/icons/icon-384x384.png",
+  "/assets/icons/icon-512x512.png"
 ];
 
 self.addEventListener("install", function (event) {

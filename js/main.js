@@ -13,6 +13,46 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
+  function cardToVertical() {
+    const cardHorizontalElement = document.querySelectorAll(
+      ".card-horizontal-container"
+    );
+    const cardStackedElement = document.querySelectorAll(
+      ".card-stacked-container"
+    );
+    window.onresize = () => {
+      let windowWidth = window.innerWidth;
+      console.log(windowWidth);
+      if (windowWidth <= 682) {
+        cardHorizontalElement.forEach((item) => {
+          item.classList.remove("horizontal");
+        });
+        cardStackedElement.forEach((item) => {
+          item.classList.remove("card-stacked");
+        });
+      } else if (windowWidth > 682) {
+        cardHorizontalElement.forEach((item) => {
+          item.classList.add("horizontal");
+        });
+        cardStackedElement.forEach((item) => {
+          item.classList.add("card-stacked");
+        });
+      }
+    };
+  }
+
+  function trimText() {
+    let excerpt = document.querySelectorAll(".excerpt");
+
+    excerpt.forEach((element) => {
+      let excerptText = element.innerText;
+      if (excerptText.length > 100) {
+        let trimmedText = `${excerptText.substr(0, 120)}...`;
+        element.innerHTML = trimmedText;
+      }
+    });
+  }
+
   function loadNav() {
     const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
@@ -62,6 +102,12 @@ document.addEventListener("DOMContentLoaded", function () {
           if (page === "home") {
             const carouselElement = document.querySelectorAll(".carousel");
             M.Carousel.init(carouselElement);
+          } else if (page === "planets") {
+            const modalElements = document.querySelectorAll(".modal");
+            M.Modal.init(modalElements);
+
+            trimText();
+            cardToVertical();
           }
         } else if (this.status == 404) {
           content.innerHTML = "<p>Halaman tidak ditemukan</p>";
